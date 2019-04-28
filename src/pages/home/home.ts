@@ -14,7 +14,7 @@ export class HomePage {
   }
 
   login(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot('TabsPage');
   }
 
 }
