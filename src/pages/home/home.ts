@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { Credenciais } from '../../models/credenciais';
+import { AuthService } from '../../services/auth.service';
 
 @IonicPage()
 @Component({
@@ -9,12 +10,25 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  creds: Credenciais = {
+    email: "",
+    senha: ""
+  }
+
+  constructor(
+    public navCtrl: NavController,
+    public auth: AuthService
+  ) {
 
   }
 
-  login(){
-    this.navCtrl.setRoot('TabsPage');
+  login() {
+    this.auth.authenticate(this.creds)
+      .subscribe(response => {
+        console.log(response.headers.get('Authorization'));
+        this.navCtrl.setRoot('TabsPage');
+      },
+        error => { });
   }
 
 }
