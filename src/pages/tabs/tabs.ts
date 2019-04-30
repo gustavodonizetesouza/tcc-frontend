@@ -7,8 +7,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabsPage {
 
-  tab1Root = 'AlunosPage';
+  tab1Root = 'PerfilPage';
   tab2Root = 'AlunosPage';
+  tab3Root = 'AlunosPage';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
