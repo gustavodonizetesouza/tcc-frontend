@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StorageService } from '../services/storage.service';
 import { AuthInterceptorProvider } from '../interceptors/auth-interceptor';
+import { AlunoService } from '../services/aluno.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AuthInterceptorProvider } from '../interceptors/auth-interceptor';
     AuthInterceptorProvider,
     ErrorInterceptorProvider,
     AuthService,
-    StorageService
+    StorageService,
+    AlunoService
   ]
 })
 export class AppModule {}

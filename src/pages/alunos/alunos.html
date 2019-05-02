@@ -5,6 +5,13 @@
 </ion-header>
 
 <ion-content padding>
-<p>Teste de página de alunos!</p>
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      <h2> {{item.nome}}</h2>
+      <p>{{item.email}}</p>
+      <p>{{item.telefone}}</p>
+      <p>{{item.endereco}}, {{item.cidade}} - {{item.uf}}</p>
+    </button>
+  </ion-list>
 
 </ion-content>

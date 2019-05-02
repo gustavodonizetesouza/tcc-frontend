@@ -31,6 +31,7 @@ export class HomePage {
         error => { });
   }
 
+
   ionViewDidEnter(){
     this.auth.refreshToken()
     .subscribe(response => {
@@ -39,5 +40,6 @@ export class HomePage {
     },
       error => { });
   }
+
 
 }
