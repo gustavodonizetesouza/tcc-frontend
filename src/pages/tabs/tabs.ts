@@ -11,7 +11,9 @@ export class TabsPage {
   tab2Root = 'AlunosPage';
   tab3Root = 'SairPage';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {

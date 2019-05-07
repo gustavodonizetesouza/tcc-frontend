@@ -7,7 +7,9 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
-    constructor(public storage: StorageService, public alertCtrl: AlertController) {
+    constructor(
+        public storage: StorageService, 
+        public alertCtrl: AlertController) {
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
